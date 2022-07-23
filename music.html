@@ -87,4 +87,31 @@ font-size:7px;
       <audio id="tune" src="https://dl.dropbox.com/s/hx6xmbsczjoepjq/jump into the deep.mp3" onended="restart();" type="audio"></audio>
   </div>
   </body>
-<script src ="https://static.tumblr.com/ot1idsc/FC3q96jxg/music.js"></script>
+  
+  
+<script>
+  $(document).ready(function(){
+    $(".play").click(function() {
+    $(".pause").show();
+    $(".play").hide();
+    });
+
+    $(".pause").click(function() {
+    $(".play").show();
+    $(".pause").hide();
+    });
+});
+
+function lala() {
+var sound = document.getElementById('tune');
+      if (sound.paused)
+        sound.play();
+      else
+        sound.pause();
+}
+
+function restart() {
+    $(".playy").show();
+    $(".pausee").hide();
+}
+  </script>
