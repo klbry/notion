@@ -52,7 +52,7 @@ z-index:10;
 }
 /*-- sidebar --*/
 #imgstrip {
-  background-image: url(https://static.tumblr.com/d40eae727a79de74c5b3c4cb5c8e9fd5/2pnwama/HC7pfqdws/tumblr_static_e6k5mmnyclc0c488gcsk00wgo.png);
+  background-image: url('https://static.tumblr.com/d40eae727a79de74c5b3c4cb5c8e9fd5/2pnwama/HC7pfqdws/tumblr_static_e6k5mmnyclc0c488gcsk00wgo.png');
   position:fixed;
   margin-top:-30px;
   height:100%;
@@ -184,7 +184,7 @@ transition: 0.6s;
     <div class="scontent">
     <img class="sidebar-img" src="notion://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa71e1d99-e9ab-4682-b1f5-6637f9624717%2FHappy_Mail_(1).png?table=block&id=9b0d5cd3-1107-43e3-b08d-8aa6fc62fa46&spaceId=3e0b08ee-946a-44e2-8b03-08b2000aa8a9&width=250&userId=746b23a0-b679-4f81-bb7b-7bde86c6bb7a&cache=v2" ondragstart="return false">
     <center>
-    <div class="title">{Title}</div>
+    <div class="title">(kea)</div>
     <div class="border">✨</div>
     </center>
   </div>
@@ -194,11 +194,15 @@ transition: 0.6s;
       <a title="play music"><div class="play">▷</div></a>
       <a title="pause music"><div class="pause">||</div></a>
       </div>
-      <div class="mtext">{text:subtitle} ♫</div>
+      <div class="mtext">listen ♫</div>
       <audio id="tune" onended="restart();" type="audio"></audio>
   </div>
   <!-- description -->
-  <div class="description">{Description}</div>
+  <div class="description">
+    ravkan inferni in ketterdam
+    <br>;<br>
+    to whatever end
+    </div>
   <center><div class="border">✨</div></center>
   <!-- navigation -->
   {block:ifLink1}
