@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+  <style>
+/*-- music player --*/
+.music {
+width:115px;
+margin: 0px 0px 0px 20px;
+text-transform: uppercase;
+text-align: center;
+font-size: 9px;
+letter-spacing: 2px;
+border-radius: 3px;
+padding: 5px 0px 0px 0px;
+background-color: #f3f3f3;
+color: #aaa;
+}
+.play, .pause {
+font-size:10px;
+color:#aaa;
+cursor:normal;
+}
+.pause {
+display:none;
+font-size:7px;
+}
+.mtext {margin-left:8px;}
+.mtext a {color:#777;}
+  
+  
+.audiowrap {
+    position:relative;
+    height:27px;
+    overflow:hidden;
+    background-color:#f8f8f8;
+    padding:14px;
+    margin-bottom:1.5em;
+}
+.audio {
+    position:absolute;
+    display:inline-block;
+    left:14px;
+    top:14px;
+    right:14px;
+    bottom:14px;
+    text-align:left;
+    line-height:27px;
+}
+.audio .player {
+    width:27px;
+    height:27px;
+    left:0;
+    top:0;
+    opacity:.5;
+    line-height:0;
+    overflow:hidden;
+    position:absolute;
+}
+.audio .track {
+    overflow:hidden;
+    line-height:15px;
+    margin-left:41px;
+    width:calc(100% - 41px);
+    display:inline-block;
+    vertical-align:middle;
+}
+.audio .track .h {
+    display:block;
+    max-height:15px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    margin-right:15px;
+}
+
+</style>
+  </head>
+
+<body>
+
+<!-- music player -->
+  <div class="music">
+      <div class="buttoms" onclick="lala();">
+      <a title="play music"><div class="play">▷</div></a>
+      <a title="pause music"><div class="pause">||</div></a>
+      </div>
+      <div class="mtext">{text:subtitle} ♫</div>
+      <audio id="tune" src="{text:music URL}" onended="restart();" type="audio"></audio>
+  </div>
+  </body>
+<script src ="https://static.tumblr.com/ot1idsc/FC3q96jxg/music.js"></script>
