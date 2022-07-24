@@ -1,129 +1,303 @@
-<!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900">
-    <title>Document</title>
-    <style>
+  
+  <!-- css -------------------------------------------------------------->
+<style type="text/css">
 
-body{
-    background-color: white;
+/* fonts */
+@font-face { font-family: "kaori"; src: url('https://dl.dropboxusercontent.com/s/gifpgk1qx565q7z/KaoriGel.ttf'); }
+@font-face { font-family: "consola"; src: url('https://dl.dropboxusercontent.com/s/ajl0g0haqzjxqs5/CONSOLA.TTF'); }
+@font-face { font-family: "shorelines"; src: url('https://dl.dropboxusercontent.com/s/yd2zi95oenolze6/Shorelines%20Script%20Bold.otf'); }
+
+/* typography ------------------------------------------------------- */
+body {
+    margin:0;
+    font-size:12px;
+    font-family:consola;
+    letter-spacing:0.75px;
+    word-spacing:1px;
+    line-height:1.8em;
+    word-break:break-word;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    overflow-x:hidden;
+    color:#aaa;
+    background:#ffffff;
+}
+a {
+    color:#c08081;
+    text-decoration:none;
+    cursor:normal;
+    transition:all 0s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+a:hover {
+text-decoration:none;
+}
+  .main {
+    margin:0 auto;
+}
+
+/*-- topbar --*/
+topbar {
+position:fixed;
+top:0;margin-top:0px;
+left:0;margin-left:0px;
+width:100%;
+height:10px;
+background-color:#fadadd;
+z-index:10;
+}
+/*-- sidebar --*/
+#imgstrip {
+  background-image: url(https://static.tumblr.com/d40eae727a79de74c5b3c4cb5c8e9fd5/2pnwama/HC7pfqdws/tumblr_static_e6k5mmnyclc0c488gcsk00wgo.png);
+  position:fixed;
+  margin-top:-6px;
+  height:100%;
+  margin-left:60px;
+  margin-right:;
+  width:161px;
+  text-align:center;
+  display:table;
+}
+
+sidebar {
+  background-image:;
+  background-color:;
+  margin-left:60px;
+  position:fixed;
+  width:160px;
+  height:100%;
+}
+sidebar .scontent {
+  margin-top: 100px;
+}
+.sidebar-img {
+position:relative;
+width:50px;
+height:50px;
+border-radius:5px;
+margin-top:10px;
+margin-bottom:35px;
+margin-left:60px;
+display:block;
+}
+.title {
+position: absolute;
+font-family: shorelines;
+font-size: 15px;
+margin-top: -25px;
+margin-bottom:0px;
+margin-left:30px;
+letter-spacing: 0px;
+cursor: normal;
+}
+.border {
+margin: 10px 0px;
+}
+/*-- music player --*/
+#music {
+width:115px;
+margin: 0px 0px 0px 20px;
+text-transform: uppercase;
+text-align: center;
+font-size: 9px;
+letter-spacing: 2px;
+border-radius: 3px;
+padding: 5px 0px 0px 0px;
+background-color: #f3f3f3;
+color: #aaa;
+}
+#button {
+background-color: #000000;
+width: 10px;
+height: 10px;
+cursor: pointer;
+margin: auto;
+display: inline;
+}
+#button:hover {
+background-color: #d6d6de;
+}
+
+.play {
+font-size: 10px;
+display: none;
+}
+.play:hover {
+font-size: 13px;
+font-weight:bold;
+}
+.play.show{
+display:block;
+}
+.pause.show{
+display:block;
+}
+.pause {
+display: none;
+font-size:7px;
+letter-spacing: 1px;
+}
+.pause:hover {
+font-size: 8px;
+font-weight:bold;
+}
+.mtext {
+color: #777;
+margin-left:8px;
 }
   
-#timer {
-  color: #eeeeee;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Lato', sans-serif;
-  font-size: .7em;
-  letter-spacing: 5px;
+/*-- description --*/
+.description{
+padding: 10px 0px 5px 0px;
+font-family: consola;
+color: #aaa;
+font-size: 10px;
+text-align: center;
+line-height: 20px;
 }
-
-.days, .hours, .minutes, .seconds {
-  display: inline-block;
-  padding: 10px;
-  width: 80px;
-  border-radius: 5px;
+.description b {color:#888;}
+.description i {color:#000000;}
+/*-- navigation --*/
+.links {
+width: 120px;
+height: 34px;
+background-color: #f3f3f3;
+border-radius: 4px;
+margin:0px 0px 5px 20px;
+cursor: normal;
+transition: 0.6s;
 }
-
-.days {
-  background: ;
-  color:  #37352F;
+.link, .linkicon a {
+position: absolute;
+width: 22px;
+height: 22px;
+text-align: center;
+line-height: 26px;
+margin: 5px 0px 0px 5px;
+border-radius: 5px;
+color: #000;
+transition: 0.6s;
 }
-
-.hours {
-  background: ;
-  color: #37352F;
+.linktext, .linktext a {
+font-family: consolas, consola;
+font-size: 10px;
+margin-left: 30px;
+letter-spacing: 1px;
+line-height: 34px;
+color:#aaa;
+transition: 0.6s;
 }
-
-.minutes {
-  background: ;
-  color:  #37352F;
+.linktext b i {
+color: #fadadd;
+font-style: normal;
+transition: 0.6s;
 }
-
-.seconds {
-  background: ;
-  color:  #37352F;
-}
-
-.numbers {
-  font-family: 'Lato', sans-serif;
-  color:  #37352F;
-  font-size: 3em;
-  text-align: center;
-}
-
-.white {
-  position: absolute;
-  background:  #eeeeee;
-  height: 85px;
-  width: 75px;
-  left: 30%;
-  top: 2%;
-}
-
-.red {
-  position: absolute;
-  background:  #EF2F3C;
-  left: 18%;
-  top: 9%;
-  height: 65px;
-  width: 70px;
- 
-}
-
-.blue {
-  position: absolute;
-  background:  #276FBF;
-  height: 80px;
-  width: 80px;
-  left: 60%;
-  top: 5%;
-
-
-}
-
-
-    </style>
+.links:hover {background-color: #fadadd ;}
+.links:hover .linkicon {color: #fff;transition: 0.6s;}
+.links:hover .linktext {color: #fff;letter-spacing: 2px;}
+.links:hover .linktext b i{color: #888;letter-spacing: 1px;}
+</style>
 </head>
+
+
 <body>
-    
-<div id="timer">
-
-    <div class="days"> 
-        <div id="days" class="numbers "> </div>days</div> 
+<topbar></topbar>
+<div class="main">
+<div id="imgstrip">&nbsp;</div>
+  <!-- sidebar -->
+  <sidebar>
+    <div class="scontent">
+    <img class="sidebar-img" src="https://static.tumblr.com/dkdqhds/iQwrfhpwe/279304751_409089730689125_6542217649380624949_n.jpeg" ondragstart="return false">
+    <center>
+    <div class="title">(kea)</div>
+    <div class="border">✨</div>
+    </center>
+  </div>
+  <!-- music player -->
+  <div id="music">
+      <div id="button">
+      <div class="play" id="play" onclick="hidePlay()">></div>
+      <div class="pause show" id="pause" onclick="hidePause()">||</div>
       </div>
+      <div class="mtext">listen ♫</div>
+      <audio id="tune" src="https://dl.dropbox.com/s/hx6xmbsczjoepjq/jump into the deep.mp3" onended="restart();" type="audio"></audio>
+  </div>
+  <!-- description -->
+  <div class="description">
+    ravkan inferni in ketterdam
+    <br>;<br>
+    to whatever end
+    </div>
+  <center><div class="border">✨</div></center>
+  <!-- navigation -->
+  <div class="links">
+  <div class="link">
+  <div class="linkicon">
+  <span class="lnr lnr-home"></span>
+  </div>
+  </div>
+  <a class="linktext" href="">
+  <b><i>001</i>://</b>home</a>
+  </div>
 
-</div>
+  <div class="links">
+  <div class="link">
+  <div class="linkicon">
+  <span class="lnr lnr-bubble"></span>
+  </div>
+  </div>
+  <a class="linktext" href="">
+  <b><i>002</i>://</b>ask</a>
+  </div>
 
-</body>
+  <div class="links">
+  <div class="link">
+  <span class="lnr lnr-bookmark"></span>
+  </div>
+  <a class="linktext" href="">
+  <b><i>003</i>://</b>{Link 3</a>
+  </div>
+
+  </sidebar>
+  
+  
+  
 <script>
-    const year = new Date().getFullYear();
-const myDate = new Date('Aug 31, 2022 00:00:00');
-console.log(myDate);
+var sound = document.getElementById('tune');
+    var play = document.getElementById('play')
+    var pause = document.getElementById('pause')
+    sound.autoplay=true;
+    
+    function showPlay() {
+        play.classList.add('show')
+        pause.classList.remove('show')
+        sound.pause()
+        play.setAttribute('onclick', 'hidePlay()');
+    }
+    function showPause() {
+        pause.classList.add('show')
+        play.classList.remove('show')
+        sound.play()
+        pause.setAttribute('onclick', 'hidePause()');
+    }
+    function hidePlay() {
+        pause.classList.add('show')
+        play.classList.remove('show')
+        sound.play()
+        pause.setAttribute('onclick', 'showPlay()');
+    }
+    function hidePause() {
+        pause.classList.remove('show')
+        play.classList.add('show')
+        sound.pause()
+        pause.setAttribute('onclick', 'showPause()');
+    }
 
-// countdown
-let timer = setInterval(function() {
-
-  // get today's date
-  const today = new Date().getTime();
-
-  // get the difference
-  const diff = myDate - today;
-
-  // math
-  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-  // display
-  document.getElementById("days").innerHTML=days
-
-
-
-
-}, 1);
-</script>
+  </script>
+  </body>
 </html>
