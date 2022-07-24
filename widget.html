@@ -140,9 +140,10 @@ display:block;
 .pause {
 display: none;
 font-size:7px;
+letter-spacing: 1px;
 }
 .pause:hover {
-font-size: 9px;
+font-size: 8px;
 font-weight:bold;
 }
 .mtext {
@@ -220,8 +221,8 @@ transition: 0.6s;
   <!-- music player -->
   <div id="music">
       <div id="button">
-      <div class="play show" id="play" onclick="hidePlay()">></div>
-      <div class="pause" id="pause" onclick="showPause()">||</div>
+      <div class="play" id="play" onclick="hidePlay()">></div>
+      <div class="pause show" id="pause" onclick="hidePause()">||</div>
       </div>
       <div class="mtext">listen ♫</div>
       <audio id="tune" src="https://dl.dropbox.com/s/hx6xmbsczjoepjq/jump into the deep.mp3" onended="restart();" type="audio" autoplay></audio>
@@ -279,6 +280,7 @@ var sound = document.getElementById('tune');
     function showPause() {
         pause.classList.add('show')
         play.classList.remove('show')
+        sound.play()
         pause.setAttribute('onclick', 'hidePause()');
     }
     function hidePlay() {
@@ -290,6 +292,7 @@ var sound = document.getElementById('tune');
     function hidePause() {
         pause.classList.remove('show')
         play.classList.add('show')
+        sound.pause()
         pause.setAttribute('onclick', 'showPause()');
     }
 
