@@ -99,7 +99,7 @@ cursor: normal;
 margin: 10px 0px;
 }
 /*-- music player --*/
-.music {
+#music {
 width:115px;
 margin: 0px 0px 0px 20px;
 text-transform: uppercase;
@@ -111,7 +111,7 @@ padding: 5px 0px 0px 0px;
 background-color: #f3f3f3;
 color: #aaa;
 }
-.button {
+#button {
 background-color: #000000;
 width: 10px;
 height: 10px;
@@ -119,21 +119,31 @@ cursor: pointer;
 margin: auto;
 display: inline;
 }
-.button:hover {
+#button:hover {
 background-color: #d6d6de;
 }
-.play, .pause {
-font-size:10px;
-color:#aaa;
-cursor:normal;
+
+.play {
+font-size: 10px;
+display: none;
 }
 .play:hover {
 font-size: 13px;
 font-weight:bold;
 }
+.play.show{
+display:block;
+}
+.pause.show{
+display:block;
+}
 .pause {
-display:none;
+display: none;
 font-size:7px;
+}
+.pause:hover {
+font-size: 9px;
+font-weight:bold;
 }
 .mtext {
 color: #777;
@@ -208,10 +218,10 @@ transition: 0.6s;
     </center>
   </div>
   <!-- music player -->
-  <div class="music">
-      <div class="button" onclick="lala();">
-      <div class="play">▷</div>
-      <div class="pause">||</div>
+  <div id="music">
+      <div id="button">
+      <div class="play show" id="play" onclick="hidePlay()">></div>
+      <div class="pause" id="pause" onclick="showPause()">||</div>
       </div>
       <div class="mtext">listen ♫</div>
       <audio id="tune" src="https://dl.dropbox.com/s/hx6xmbsczjoepjq/jump into the deep.mp3" onended="restart();" type="audio" autoplay></audio>
@@ -257,30 +267,32 @@ transition: 0.6s;
   
   
 <script>
-  $(document).ready(function(){
-    $(".play").click(function() {
-    $(".pause").show();
-    $(".play").hide();
-    });
-
-    $(".pause").click(function() {
-    $(".play").show();
-    $(".pause").hide();
-    });
-});
-
-function lala() {
 var sound = document.getElementById('tune');
-      if (sound.paused)
-        sound.play(); 
-      else
-        sound.pause();
-}
+    var play = document.getElementById('play')
+    var pause = document.getElementById('pause')
+    function showPlay() {
+        play.classList.add('show')
+        pause.classList.remove('show')
+        sound.pause()
+        play.setAttribute('onclick', 'hidePlay()');
+    }
+    function showPause() {
+        pause.classList.add('show')
+        play.classList.remove('show')
+        pause.setAttribute('onclick', 'hidePause()');
+    }
+    function hidePlay() {
+        pause.classList.add('show')
+        play.classList.remove('show')
+        sound.play()
+        pause.setAttribute('onclick', 'showPlay()');
+    }
+    function hidePause() {
+        pause.classList.remove('show')
+        play.classList.add('show')
+        pause.setAttribute('onclick', 'showPause()');
+    }
 
-function restart() {
-    $(".playy").show();
-    $(".pausee").hide();
-}
   </script>
   </body>
 </html>
