@@ -225,7 +225,7 @@ transition: 0.6s;
       <div class="pause show" id="pause" onclick="hidePause()">||</div>
       </div>
       <div class="mtext">listen ♫</div>
-      <audio id="tune" src="https://dl.dropbox.com/s/hx6xmbsczjoepjq/jump into the deep.mp3" onended="restart();" type="audio" autoplay></audio>
+      <audio id="tune" src="https://dl.dropbox.com/s/hx6xmbsczjoepjq/jump into the deep.mp3" onended="restart();" type="audio"></audio>
   </div>
   <!-- description -->
   <div class="description">
@@ -271,6 +271,8 @@ transition: 0.6s;
 var sound = document.getElementById('tune');
     var play = document.getElementById('play')
     var pause = document.getElementById('pause')
+    sound.autoplay=true;
+    
     function showPlay() {
         play.classList.add('show')
         pause.classList.remove('show')
