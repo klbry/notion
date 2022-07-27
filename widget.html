@@ -1,7 +1,26 @@
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-  <!-- css -------------------------------------------------------------->
+<!----------------------------------------------------------------------
+
+                         velvet @ shythemes
+
+----------------------------------------------------------------------->
+
+<title>tumblr.</title>
+
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet">
+<!-- tooltips -->
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script src="https://static.tumblr.com/ot1idsc/Kwzq98kp2/smt.js"></script>
+<!-- icons -->
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+<!-- music -->
+<script defer src ="lightbox.js"></script>
+
+
+<!-- css -------------------------------------------------------------->
+
 <style type="text/css">
 
 /* fonts */
@@ -9,36 +28,114 @@
 @font-face { font-family: "consola"; src: url('https://dl.dropboxusercontent.com/s/ajl0g0haqzjxqs5/CONSOLA.TTF'); }
 @font-face { font-family: "shorelines"; src: url('https://dl.dropboxusercontent.com/s/yd2zi95oenolze6/Shorelines%20Script%20Bold.otf'); }
 
-/* typography ------------------------------------------------------- */
+/*-- typography -- */
 body {
-    margin:0;
-    font-size:12px;
-    font-family:consola;
-    letter-spacing:0.75px;
-    word-spacing:1px;
-    line-height:1.8em;
-    word-break:break-word;
-    -moz-osx-font-smoothing:grayscale;
-    -webkit-font-smoothing:antialiased;
-    font-smoothing:antialiased;
-    overflow-x:hidden;
-    color:#aaa;
-    background:#ffffff;
+margin:0;
+font-size:12px;
+font-family:consola;
+letter-spacing:0.75px;
+word-spacing:1px;
+line-height:1.8em;
+word-break:break-word;
+-moz-osx-font-smoothing:grayscale;
+-webkit-font-smoothing:antialiased;
+font-smoothing:antialiased;
+overflow-x:hidden;
+color:#aaa;
+background: #ffffff;
 }
 a {
-    color:#c08081;
-    text-decoration:none;
-    cursor:normal;
-    transition:all 0s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
+color:#c08081;
+text-decoration:none;
+cursor:normal;
+transition:all 0s ease-in-out;
+-webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
 }
 a:hover {
 text-decoration:none;
 }
-  .main {
-    margin:0 auto;
+small, sub {
+font-size:1em;
+vertical-align:baseline;
+}
+blockquote, ol, ul, p, pre, figure {
+margin:1em 0;
+}
+h1, h2, h3, h4, h5, h6 {
+margin:0 0 1em;
+font-size:1em;
+font-weight:inherit;
+}
+img {
+border:0;
+max-width:100%;
+height:auto;
+}
+pre {
+white-space:normal;
+}
+h1 {
+font-family:shorelines;
+font-size:13px;
+text-transform:lowercase;
+letter-spacing:2px;
+margin:0 0 1em;
+color:#000000;
+}
+ol {
+counter-reset:list;
+list-style:none;
+padding:0;
+}
+ol li {
+position:relative;
+padding-left:3em;
+counter-increment:list;
+}
+ol li:before {
+content:counter(list) '.';
+position:absolute;
+margin-left:-3em;
+}
+.title {
+font-size:1.2em;
+line-height:1.6em;
+margin-bottom:.5em;
+}
+b, strong {
+font-size:7.5px;
+font-family:kaori;
+letter-spacing:1.5px;
+text-transform:uppercase;
+}
+/*-- text highlight --*/
+::selection {
+background: #f3f3f3;
+color:#666;
+}
+/*-- tooltips --*/
+#s-m-t-tooltip {
+padding: 3px 9px;
+margin: 26px 9px 0px 15px;
+background-color: #ffffff;
+border:1px solid #ffffff;
+font-family: karla;
+font-size: calc(12px - 3px);
+letter-spacing: 1px;
+text-transform: uppercase;
+color: #aaa;
+z-index:99999999999999999999999999998!important;
+max-width: calc(250px * 1.25);
+}
+/*-- layout -- */
+/*-- cursor --*/
+* {cursor:url(https://78.media.tumblr.com/66991e3a24432876aa22db906d5071de/tumblr_pe9t1ipv6S1qg2f5co6_r1_75sq.png), auto;
+}
+
+.main {
+margin:0 auto;
 }
 
 /*-- topbar --*/
@@ -49,54 +146,42 @@ left:0;margin-left:0px;
 width:100%;
 height:10px;
 background-color:#fadadd;
-z-index:10;
+z-index: 100;
 }
 /*-- sidebar --*/
 #imgstrip {
-  background-image: url(https://static.tumblr.com/d40eae727a79de74c5b3c4cb5c8e9fd5/2pnwama/HC7pfqdws/tumblr_static_e6k5mmnyclc0c488gcsk00wgo.png);
-  position:fixed;
-  margin-top:-6px;
-  height:100%;
-  margin-left:60px;
-  margin-right:;
-  width:161px;
-  text-align:center;
-  display:table;
+background-image: url(https://static.tumblr.com/d40eae727a79de74c5b3c4cb5c8e9fd5/2pnwama/HC7pfqdws/tumblr_static_e6k5mmnyclc0c488gcsk00wgo.png);
+position:fixed;
+margin-top:-30px;
+height:100%;
+margin-left:60px;
+width: 200px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
-
 sidebar {
-  background-image:;
-  background-color:;
-  margin-left:60px;
-  position:fixed;
-  width:160px;
-  height:100%;
+margin-top: 100%;
+width:160px;
+height:100%;
 }
-sidebar .scontent {
-  margin-top: 145px;
-}
-.sidebar-img {
-position:relative;
-width:50px;
-height:50px;
+sidebar img {
+margin-left: 25px;
+width: 100px;
+height:100px;
 border-radius:5px;
-margin-top:10px;
-margin-bottom:35px;
-margin-left:50px;
-display:block;
 }
 .title {
-position: absolute;
+text-align: center;
+position: relative;
 font-family: shorelines;
 font-size: 15px;
-margin-top: -25px;
-margin-bottom:0px;
-margin-left:30px;
 letter-spacing: 0px;
 cursor: normal;
 }
 .border {
 margin: 10px 0px;
+text-align: center;
 }
 /*-- music player --*/
 #music {
@@ -122,17 +207,14 @@ display: inline;
 #button:hover {
 background-color: #d6d6de;
 }
-
 .play {
 font-size: 10px;
 display: none;
-
 }
 .play:hover {
 font-size: 13px;
 font-weight:bold;
 color: #888;
-
 }
 .play.show{
 display:block;
@@ -151,13 +233,11 @@ letter-spacing: 1px;
 font-size: 8px;
 font-weight:bold;
 color: #888;
-
 }
 .mtext {
 color: #aaa;
 margin-left:8px;
 }
-  
 /*-- description --*/
 .description{
 padding: 10px 0px 5px 0px;
@@ -185,7 +265,7 @@ width: 22px;
 height: 22px;
 text-align: center;
 line-height: 26px;
-margin: 10px 0px 0px 5px;
+margin: 5px 0px 0px 5px;
 border-radius: 5px;
 color: #000;
 transition: 0.6s;
@@ -205,50 +285,174 @@ font-style: normal;
 transition: 0.6s;
 }
 .links:hover {background-color: #fadadd ;}
-.links:hover .linkicon {color: #fff;}
+.links:hover .linkicon {color: #fff;transition: 0.6s;}
 .links:hover .linktext {color: #fff;letter-spacing: 2px;}
 .links:hover .linktext b i{color: #888;letter-spacing: 1px;}
+/*-- masonry --*/
+.content {
+background-color:;
+font-size:0;
+margin:40px;
+width: auto;
+}
+.entry {
+position:relative;
+font-size:12px;
+max-width:300px;
+padding:6px 6px 30px 6px;
+margin-bottom: 20px;
+margin-right: 50px;
+display:inline-block;
+opacity:1;
+z-index:1;
+border: 1px solid #ededed;
+background-color: #ffffff;
+}
+.entry:last-child {
+margin-bottom:0;
+}
+.post {
+border-bottom: 1px solid #ededed;
+max-width:500px;
+margin:0 auto;
+}
+.post img {
+transition: 0.5s;
+cursor: pointer;
+}
+.post img:hover{
+opacity:0.8;
+}
+.pagination {
+overflow:hidden;
+margin:40px;
+padding:40px;
+margin-top:0!important;
+padding-top:0!important;
+max-width:540px;
+max-width:{text:post width};
+opacity:0;
+z-index:-1;
+}
+.pagination .next {
+float:right;
+color:#111111;
+}
+/*-- breakpoints -- */
+@media screen and (min-width:700px) {
+.content, .pagination {
+margin:40px 40px 40px 360px;
+}
+.entry{
+width:calc(50% - 0.5px);
+}
+.light-content {
+width: 100%;
+}
+}
+}
+@media screen and (min-width:1020px) {
+.content, .pagination {
+margin-right:39px;
+}
+.entry {
+width:calc(50% - 0.5px);
+}
+}
+@media screen and (min-width:1340px) {
+.content, .pagination {
+margin-right:38px;
+}
+.entry {
+width:calc(33.3% - 0.5px);
+}
+}
+@media screen and (min-width:1660px) {
+.content, .pagination {
+margin-right:37px;
+}
+.entry {
+width:calc(25% - 0.5px);
+}
+}
+/*-- scrollbar -- */
+::-webkit-scrollbar {
+width:9px;
+height:9px;
+}
+::-webkit-scrollbar {
+background-color:#ffffff; /* background color */
+}
+::-webkit-scrollbar-track {
+border:8px solid #ffffff; /* background color */
+border-left:0;
+background-color:#e6e6e6; /* light border color */
+}
+::-webkit-scrollbar-thumb {
+border:8px solid #ffffff; /* background color */
+border-left:0;
+background-color:#888888; /* dark border color */
+min-height:24px;
+min-width:24px;
+}
+/*-- lightbox --*/
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0,0%,7%,.92);
+}
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+}
 </style>
+<link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css">
 </head>
 
 
 <body>
 <topbar></topbar>
 <div class="main">
-<div id="imgstrip">&nbsp;</div>
+<div id="imgstrip">
   <!-- sidebar -->
-  <sidebar>
-    <div class="scontent">
-    <img class="sidebar-img" src="https://static.tumblr.com/dkdqhds/iQwrfhpwe/279304751_409089730689125_6542217649380624949_n.jpeg" ondragstart="return false">
-    <center>
+<sidebar>
+    <img class="sidebar img" src="img/9.png">
     <div class="title">(kea)</div>
     <div class="border">✨</div>
-    </center>
-  </div>
   <!-- music player -->
   <div id="music">
-      <div id="button">
-      <div class="play" id="play" onclick="hidePlay()">></div>
-      <div class="pause show" id="pause" onclick="hidePause()">||</div>
-      </div>
-      <div class="mtext">listen ♫</div>
-      <audio id="tune" src="https://dl.dropbox.com/s/hx6xmbsczjoepjq/jump into the deep.mp3" onended="restart();" type="audio"></audio>
-  </div>
+    <div id="button">
+        <div class="play" id="play" onclick="hidePlay()">></div>
+        <div class="pause show" id="pause" onclick="hidePause()">||</div>
+    </div>
+    <div class="mtext">listen ♫</div>
+    <audio id="tune" src="" type="audio"></audio>
+</div>
   <!-- description -->
   <div class="description">
     ravkan inferni in ketterdam
     <br>;<br>
-    to whatever end
-    </div>
-  <center><div class="border">✨</div></center>
+    to whatever end</div>
+    <div class="border">✨</div>
   <!-- navigation -->
+
   <div class="links">
   <div class="link">
   <div class="linkicon">
   <span class="lnr lnr-home"></span>
   </div>
   </div>
-  <a class="linktext" href="https://www.notion.so/Dashboard-9b0d5cd3110743e3b08d8aa6fc62fa46">
+  <a class="linktext" href="/">
   <b><i>001</i>://</b>home</a>
   </div>
 
@@ -258,7 +462,7 @@ transition: 0.6s;
   <span class="lnr lnr-bubble"></span>
   </div>
   </div>
-  <a class="linktext" href="">
+  <a class="linktext" href="/">
   <b><i>002</i>://</b>ask</a>
   </div>
 
@@ -266,45 +470,163 @@ transition: 0.6s;
   <div class="link">
   <span class="lnr lnr-bookmark"></span>
   </div>
-  <a class="linktext" href="">
-  <b><i>003</i>://</b>{Link 3</a>
+  <a class="linktext" href="/">
+  <b><i>003</i>://</b>link</a>
   </div>
+</sidebar>
+</div>
+<!-- posts -->
+<div class="content">
 
-  </sidebar>
-  
-  
-  
-<script>
-var sound = document.getElementById('tune');
-    var play = document.getElementById('play')
-    var pause = document.getElementById('pause')
-    sound.autoplay=true;
-    
-    function showPlay() {
-        play.classList.add('show')
-        pause.classList.remove('show')
-        sound.pause()
-        play.setAttribute('onclick', 'hidePlay()');
-    }
-    function showPause() {
-        pause.classList.add('show')
-        play.classList.remove('show')
-        sound.play()
-        pause.setAttribute('onclick', 'hidePause()');
-    }
-    function hidePlay() {
-        pause.classList.add('show')
-        play.classList.remove('show')
-        sound.play()
-        pause.setAttribute('onclick', 'showPlay()');
-    }
-    function hidePause() {
-        pause.classList.remove('show')
-        play.classList.add('show')
-        sound.pause()
-        pause.setAttribute('onclick', 'showPause()');
-    }
+    <article class="entry">
+        <section class="post">
+                <img src="img/20.jpeg">
+        </section>
+    </article>
 
-  </script>
-  </body>
+    <article class="entry">
+        <section class="post">
+            <img src="img/1.jpeg">
+        </section>
+    </article>
+
+    <article class="entry">
+        <section class="post">
+            <img src="img/8.jpeg">
+            <img src="img/7.jpeg">
+        </section>
+    </article>
+
+    <article class="entry">
+        <section class="post">
+            <img src="img/11.png">
+            <img src="img/12.jpeg">
+            <img src="img/13.png">
+            <img src="img/14.jpeg">
+            <img src="img/15.png">
+            <img src="img/16.png">
+            <img src="img/17.png">
+            <img src="img/18.jpeg">
+        </section>
+    </article>
+
+    <article class="entry">
+        <section class="post">
+                <img src="img/2.jpeg">
+        </section>
+    </article>
+
+    <article class="entry">
+        <section class="post">
+                <img src="img/3.jpeg">
+        </section>
+    </article>
+
+    <article class="entry">
+        <section class="post">
+                <img src="img/4.jpeg">
+        </section>
+    </article>
+
+    <article class="entry">
+        <section class="post">
+                <img src="img/5.jpeg">
+        </section>
+    </article>
+
+    <article class="entry">
+        <section class="post">
+                <img src="img/6.jpeg">
+        </section>
+    </article>
+
+    <article class="entry">
+        <section class="post">
+                <img src="img/9.png">
+        </section>
+    </article>
+
+    <article class="entry">
+        <section class="post">
+                <img src="img/10.jpeg">
+        </section>
+    </article>
+</div>
+</div><!-- content -->
+</div><!-- main -->
+
+<!--music-->
+<script> <!--music-->
+    var sound = document.getElementById('tune');
+        var play = document.getElementById('play')
+        var pause = document.getElementById('pause')
+        sound.autoplay=true;
+        
+        function showPlay() {
+            play.classList.add('show')
+            pause.classList.remove('show')
+            sound.pause()
+            play.setAttribute('onclick', 'hidePlay()');
+        }
+        function showPause() {
+            pause.classList.add('show')
+            play.classList.remove('show')
+            sound.play()
+            pause.setAttribute('onclick', 'hidePause()');
+        }
+        function hidePlay() {
+            pause.classList.add('show')
+            play.classList.remove('show')
+            sound.play()
+            pause.setAttribute('onclick', 'showPlay()');
+        }
+        function hidePause() {
+            pause.classList.remove('show')
+            play.classList.add('show')
+            sound.pause()
+            pause.setAttribute('onclick', 'showPause()');
+        }
+      </script>
+
+<!--masonry-->    
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script>
+        var elem = document.querySelector('.content');
+        var msnry = new Masonry( elem, {
+        itemSelector: '.entry',
+        horizontalOrder: true,
+        opacity: 1,
+        zIndex: 1
+        });
+
+        $grid.imagesLoaded().progress( function() {
+        $grid.masonry('layout');
+        });
+    </script>
+    <script>
+        const lightbox = document.createElement('div')
+        lightbox.id = 'lightbox'
+        document.body.appendChild(lightbox)
+
+        const images = document.querySelectorAll('img')
+        images.forEach(image => {
+        image.addEventListener('click', e => {
+        lightbox.classList.add('active')
+        const img = document.createElement('img')
+        img.src = image.src
+        while (lightbox.firstChild) {
+        lightbox.removeChild(lightbox.firstChild)
+        }
+        lightbox.appendChild(img)
+        })
+        })
+
+        lightbox.addEventListener('click', e => {
+        if (e.target !== e.currentTarget) return
+        lightbox.classList.remove('active')
+        })
+    </script>
+
+</body>
 </html>
