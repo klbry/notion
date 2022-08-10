@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+body{
+font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+letter-spacing: 0.055em;
+line-height: 1.6;
+font-size: 15px;
+color: rgb(55, 53, 47);
+}
+span{
+line-height: 1.2;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.grid{
+display: grid;
+position: relative;
+grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+gap: 16px;
+}
+.block{
+display: block;
+box-shadow: rgba(15,15,15,0.1) 0px 0px 0px 1px, rgba(15,15,15,0.1) 0px 2px 4px;
+border-radius: 3px;
+}
+.days{
+max-width: 100%;
+width: auto;
+white-space: pre-wrap;
+word-break: break-word;
+caret-color: rgb(55, 53, 47);
+font-size: 14px;
+line-height: 1.5;
+min-height: 21px;
+font-weight: 500;
+pointer-events: none;
+padding: 8px 10px 6px;
+}
+.details{
+padding-top: 0px;
+padding-left: 10px;
+padding-bottom: 10px;
+}
+.subj {
+display:block;
+align-items: center;
+flex-shrink: 0;
+min-width: 0px;
+height: 14px;
+border-radius: 3px;
+padding-left: 6px;
+padding-right: 6px;
+font-size: 12px;
+line-height: 120%;
+margin: 0px 4px 0px 0px;
+white-space: nowrap;
+}
+</style>
+</head>
+
+<body>
+<div class="grid">
+
+<div class="block">
+    <div class="days">Monday</div>
+    <div class="details">
+        <div style="display: flex; align-items: center; font-size: 12px; height: 24px;">
+        <div class="subj" style="color: rgb(76, 35, 55); background: rgb(245, 224, 233);">EUTENICS</div>
+        </div>
+
+        <div style="display: flex; align-items: center; font-size: 12px; height: 24px; white-space: nowrap; padding-right: 8px;">
+        <span>2:30 PM - 3:30 PM</span>
+        </div>
+    </div><!--details-->
+</div> <!--block-->
+
+<div class="block">
+    <div class="days">Tuesday</div>
+    <div class="details">
+        <div style="display: flex; align-items: center; font-size: 12px; height: 24px; white-space: nowrap;">
+        <div class="subj" style="color: rgb(24, 51, 71); background: rgb(211, 229, 239);">ETHIPROF</div>
+        </div>
+
+        <div style="display: flex; align-items: center; font-size: 12px; height: 24px; white-space: nowrap; padding-right: 8px;">
+        <span>11:00 AM - 2:30 PM</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="block">
+    <div class="days">Wednesday</div>
+    <div class="details">
+        <div style="display: flex; align-items: center; font-size: 12px; height: 24px; white-space: nowrap;">
+        <div class="subj" style="color: rgb(24, 51, 71); background: rgb(211, 229, 239);"></div>
+        </div>
+
+        <div style="display: flex; align-items: center; font-size: 12px; height: 24px; white-space: nowrap; padding-right: 8px;">
+        <span></span>
+        </div>
+    </div>
+</div>
+
+<div class="block">
+    <div class="days">Thursday</div>
+    <div class="details">
+        <div style="display: flex; align-items: center; font-size: 12px; height: 24px; white-space: nowrap;">
+        <div class="subj" style="color: rgb(73, 41, 14); background: rgb(250, 222, 201);">HISTARTD</div>
+        </div>
+
+        <div style="display: flex; align-items: center; font-size: 12px; height: 24px; white-space: nowrap; padding-right: 8px;">
+        <span>7:30 AM - 11:00 AM</span>
+        </div>
+    </div>
+</div>
+
+<div class="block">
+    <div class="days">Friday</div>
+    <div class="details">
+        <div style="display: flex; align-items: center; font-size: 12px; height: 24px; white-space: nowrap;">
+        <div class="subj" style="color: rgb(64, 44, 27); background: rgb(253, 236, 200);">FREEDRAW</div>
+        </div>
+
+        <div style="display: flex; align-items: center; font-size: 12px; height: 24px; white-space: nowrap; padding-right: 8px;">
+        <span>11:00 AM - 2:30 PM</span>
+        </div>
+    </div>
+</div>
+
+<div class="block">
+    <div class="days">Saturday</div>
+    <div class="details">
+        <div style="display: flex; align-items: center; font-size: 12px; height: 24px; white-space: nowrap;">
+        <div class="subj" style="color: rgb(65, 36, 84); background: rgb(232, 222, 238);">GRAPHCOM</div>
+        </div>
+
+        <div style="display: flex; align-items: center; font-size: 12px; height: 24px; white-space: nowrap; padding-right: 8px;">
+        <span>7:30 AM - 11:00 AM</span>
+        </div>
+    </div>
+</div>
+
+</div> <!--grid-->
+</body>
+
+</html>
